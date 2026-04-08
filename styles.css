@@ -442,9 +442,16 @@ input {
   box-shadow: 0 18px 34px rgba(160, 120, 39, 0.08);
 }
 
+.hero-main-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
 .hero-main-title {
   margin: 0;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 800;
   color: #46320a;
   line-height: 1.2;
