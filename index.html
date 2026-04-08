@@ -472,36 +472,39 @@
 
     <div class="purchase-modal-overlay" id="purchase-modal" hidden>
       <div class="purchase-modal" role="dialog" aria-modal="true" aria-labelledby="purchase-modal-title">
+
+        <div class="purchase-modal-top">
+          <header class="purchase-modal-header">
+            <div>
+              <h2 class="purchase-modal-title">代理 IP 商店</h2>
+              <p class="purchase-modal-subtitle">RoxyBrowser 为您精选、验证、集成了来自不同可靠服务商的最优质代理 IP。</p>
+            </div>
+            <button class="purchase-close" type="button" data-close-purchase aria-label="关闭">×</button>
+          </header>
+
+          <section class="purchase-section purchase-section-supplier">
+            <h3>服务商</h3>
+            <div class="tile-group tile-group-supplier" data-tile-group>
+              <button class="purchase-tile purchase-tile-roxy tile-with-badge active" type="button" data-supplier="roxy">
+                <span class="tile-badge tile-badge-brand tile-badge-tip">自营<span class="tile-badge-tooltip">Roxy 直营资源池，独享 IP 不共享，专属售后快速响应，质量问题支持免费换</span></span>
+                <span class="roxy-tile-mark">R</span>
+                <span class="roxy-tile-body">
+                  <strong>RoxyBrowser</strong>
+                  <small>直营资源 · 独享 IP · 专属售后</small>
+                </span>
+              </button>
+              <button class="purchase-tile" type="button" data-supplier="rola">Rola-IP</button>
+              <button class="purchase-tile purchase-tile-disabled" type="button" disabled>
+                更多供应商
+                <small class="tile-coming-soon">敬请期待</small>
+              </button>
+            </div>
+          </section>
+        </div>
+
         <div class="purchase-modal-grid">
           <section class="purchase-modal-main">
-            <header class="purchase-modal-header">
-              <div>
-                <h2 class="purchase-modal-title">代理 IP 商店</h2>
-                <p class="purchase-modal-subtitle">RoxyBrowser 为您精选、验证、集成了来自不同可靠服务商的最优质代理 IP。</p>
-              </div>
-              <button class="purchase-close" type="button" data-close-purchase aria-label="关闭">×</button>
-            </header>
-
             <div class="purchase-form">
-              <section class="purchase-section">
-                <h3>服务商</h3>
-                <div class="tile-group tile-group-supplier" data-tile-group>
-                  <button class="purchase-tile purchase-tile-roxy tile-with-badge active" type="button" data-supplier="roxy">
-                    <span class="tile-badge tile-badge-brand tile-badge-tip">自营<span class="tile-badge-tooltip">Roxy 直营资源池，独享 IP 不共享，专属售后快速响应，质量问题支持免费换</span></span>
-                    <span class="roxy-tile-mark">R</span>
-                    <span class="roxy-tile-body">
-                      <strong>RoxyBrowser</strong>
-                      <small>直营资源 · 独享 IP · 专属售后</small>
-                    </span>
-                  </button>
-                  <button class="purchase-tile" type="button" data-supplier="rola">Rola-IP</button>
-                  <button class="purchase-tile purchase-tile-disabled" type="button" disabled>
-                    更多供应商
-                    <small class="tile-coming-soon">敬请期待</small>
-                  </button>
-                </div>
-              </section>
-
               <section class="purchase-section">
                 <h3>类型</h3>
                 <div class="tile-group two-col" data-tile-group>

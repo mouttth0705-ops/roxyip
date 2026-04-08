@@ -1372,6 +1372,11 @@ input {
   box-shadow: 0 28px 60px rgba(16, 34, 62, 0.2);
 }
 
+.purchase-modal-top {
+  padding: 24px 24px 20px;
+  border-bottom: 1px solid rgba(16, 31, 61, 0.08);
+}
+
 .purchase-modal-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) 360px;
@@ -1388,9 +1393,7 @@ input {
   justify-content: space-between;
   gap: 18px;
   align-items: center;
-  margin-bottom: 28px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(16, 31, 61, 0.08);
+  margin-bottom: 20px;
   background:
     linear-gradient(180deg, rgba(244, 248, 255, 0.9), rgba(255, 255, 255, 0)),
     linear-gradient(135deg, rgba(202, 227, 255, 0.45), rgba(255, 241, 228, 0.24));
