@@ -9,6 +9,8 @@ const summaryQuantity = document.getElementById("summary-quantity");
 const quantityButtons = Array.from(document.querySelectorAll("[data-quantity-step]"));
 const actionCells = Array.from(document.querySelectorAll(".action-cell"));
 const actionToggles = Array.from(document.querySelectorAll("[data-action-toggle]"));
+const purchaseSummary = document.querySelector(".purchase-summary");
+const rolaPanel = document.getElementById("rola-redirect-panel");
 
 function closeActionMenus() {
   actionCells.forEach((cell) => {
@@ -27,6 +29,18 @@ function setPurchaseModalOpen(isOpen) {
 
   purchaseModal.hidden = !isOpen;
   document.body.style.overflow = isOpen ? "hidden" : "";
+}
+
+function setSupplier(supplier) {
+  if (!purchaseSummary || !rolaPanel) return;
+
+  if (supplier === "rola") {
+    purchaseSummary.hidden = true;
+    rolaPanel.hidden = false;
+  } else {
+    purchaseSummary.hidden = false;
+    rolaPanel.hidden = true;
+  }
 }
 
 rows.forEach((row) => {
@@ -72,6 +86,10 @@ tileGroups.forEach((group) => {
     button.addEventListener("click", () => {
       buttons.forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
+
+      if (button.dataset.supplier) {
+        setSupplier(button.dataset.supplier);
+      }
     });
   });
 });
@@ -175,3 +193,18 @@ if (countrySearch) {
     }
   });
 }
+
+// Rola password reveal toggle
+const rolaEyeToggle = document.getElementById("rola-eye-toggle");
+const rolaPasswordDisplay = document.getElementById("rola-password-display");
+const rolaPassword = "Roxy@Rola2024";
+let rolaPasswordVisible = false;
+
+if (rolaEyeToggle && rolaPasswordDisplay) {
+  rolaEyeToggle.addEventListener("click", () => {
+    rolaPasswordVisible = !rolaPasswordVisible;
+    rolaPasswordDisplay.textContent = rolaPasswordVisible ? rolaPassword : "••••••••";
+    rolaEyeToggle.setAttribute("aria-label", rolaPasswordVisible ? "隐藏密码" : "显示密码");
+  });
+}
+

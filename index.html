@@ -486,7 +486,7 @@
               <section class="purchase-section">
                 <h3>服务商</h3>
                 <div class="tile-group tile-group-supplier" data-tile-group>
-                  <button class="purchase-tile purchase-tile-roxy tile-with-badge active" type="button">
+                  <button class="purchase-tile purchase-tile-roxy tile-with-badge active" type="button" data-supplier="roxy">
                     <span class="tile-badge tile-badge-brand tile-badge-tip">自营<span class="tile-badge-tooltip">Roxy 直营资源池，独享 IP 不共享，专属售后快速响应，质量问题支持免费换</span></span>
                     <span class="roxy-tile-mark">R</span>
                     <span class="roxy-tile-body">
@@ -494,7 +494,7 @@
                       <small>直营资源 · 独享 IP · 专属售后</small>
                     </span>
                   </button>
-                  <button class="purchase-tile" type="button">Rola-IP</button>
+                  <button class="purchase-tile" type="button" data-supplier="rola">Rola-IP</button>
                   <button class="purchase-tile purchase-tile-disabled" type="button" disabled>
                     更多供应商
                     <small class="tile-coming-soon">敬请期待</small>
@@ -729,6 +729,57 @@
 
               <button class="summary-pay-btn" type="button">立即支付</button>
               <p class="summary-agreement">继续操作即表示您同意我们的 <a href="#">用户协议</a></p>
+            </div>
+          </aside>
+
+          <aside class="rola-redirect-panel" id="rola-redirect-panel" hidden>
+            <div class="rola-panel-card">
+              <div class="rola-panel-header">
+                <div class="rola-logo-wrap">
+                  <svg class="rola-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="#e8f8f5"/>
+                    <path d="M24 12c-6.627 0-12 5.373-12 12s5.373 12 12 12c3.04 0 5.813-1.133 7.92-2.993L30 31.5A9.96 9.96 0 0 1 24 34c-5.523 0-10-4.477-10-10s4.477-10 10-10c2.34 0 4.49.804 6.196 2.143L28 18h8v8l-2.758-2.758A11.94 11.94 0 0 0 24 12z" fill="#1db990"/>
+                  </svg>
+                </div>
+                <div class="rola-panel-title-block">
+                  <h3 class="rola-panel-name">ROLA-IP</h3>
+                  <div class="rola-type-badges">
+                    <span class="rola-type-badge">住宅代理 IP</span>
+                    <span class="rola-type-badge">数据中心代理 IP</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="rola-desc">欧美最重要的代理 IP 供应商之一。在五大洲拥有 900 多个代理 IP 服务器中心，为客户提供稳定服务。</p>
+
+              <p class="rola-account-label">已为您创建私有账户：<span class="rola-discount-highlight">享 10% 折扣优惠</span></p>
+
+              <div class="rola-credentials-box">
+                <span class="rola-cred-item">账号：<span class="rola-cred-value">Roxybrowser$moutth0705</span></span>
+                <span class="rola-cred-sep"></span>
+                <span class="rola-cred-item">初始密码：<span class="rola-password-mask" id="rola-password-display">••••••••</span><button class="rola-eye-btn" type="button" id="rola-eye-toggle" aria-label="显示密码">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button></span>
+              </div>
+
+              <hr class="rola-divider" />
+
+              <div class="rola-advantages">
+                <h4>优势</h4>
+                <div class="rola-adv-grid">
+                  <span class="rola-adv-item"><span class="rola-adv-check">✓</span>真人住宅IP</span>
+                  <span class="rola-adv-item"><span class="rola-adv-check">✓</span>不限流量</span>
+                  <span class="rola-adv-item"><span class="rola-adv-check">✓</span>极低延迟</span>
+                </div>
+              </div>
+
+              <div class="rola-panel-footer">
+                <span class="rola-exclusive-label"><em>Roxy 独家折扣: 9 折</em></span>
+                <a class="rola-goto-btn" href="https://rola-ip.co" target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  前往 rola-ip.co
+                </a>
+              </div>
             </div>
           </aside>
         </div>
