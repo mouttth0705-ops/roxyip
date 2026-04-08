@@ -1531,6 +1531,16 @@ input {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.tile-group.five-col {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile-group.five-col .purchase-tile {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
 .purchase-tile {
   min-height: 54px;
   padding: 0 16px;
@@ -1882,6 +1892,14 @@ input {
 .usage-icon-ecom {
   color: #ffffff;
   background: linear-gradient(135deg, #ff6b35, #f7c948);
+}
+
+.usage-icon-reddit {
+  color: #ffffff;
+  background: #ff4500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .purchase-modal-title {
