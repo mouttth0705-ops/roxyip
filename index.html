@@ -502,7 +502,7 @@
           </section>
         </div>
 
-        <div class="purchase-modal-grid">
+        <div class="purchase-modal-grid" id="purchase-modal-grid">
           <section class="purchase-modal-main">
             <div class="purchase-form">
               <section class="purchase-section">
@@ -671,16 +671,6 @@
                 </div>
               </section>
 
-              <section class="purchase-section purchase-notes">
-                <h3>注意事项</h3>
-                <ol>
-                  <li>所有代理 IP 都同时支持 SOCKS5 和 HTTP 协议。</li>
-                  <li>购买的代理 IP 都是独享专用 IP，不会与他人共享。</li>
-                  <li>订阅期间所有代理 IP 不限流量。</li>
-                  <li>若购买的代理 IP 出现无法连接的问题，支持免费更换或退款。</li>
-                  <li>您可以在代理 IP 列表中延长代理 IP 使用期限，价格与购买时相同。</li>
-                </ol>
-              </section>
             </div>
           </section>
 
@@ -733,10 +723,24 @@
               <button class="summary-pay-btn" type="button">立即支付</button>
               <p class="summary-agreement">继续操作即表示您同意我们的 <a href="#">用户协议</a></p>
             </div>
-          </aside>
 
-          <aside class="rola-redirect-panel" id="rola-redirect-panel" hidden>
-            <div class="rola-panel-card">
+            <section class="purchase-section purchase-notes">
+              <details class="notes-details">
+                <summary class="notes-summary">注意事项</summary>
+                <ol>
+                  <li>所有代理 IP 都同时支持 SOCKS5 和 HTTP 协议。</li>
+                  <li>购买的代理 IP 都是独享专用 IP，不会与他人共享。</li>
+                  <li>订阅期间所有代理 IP 不限流量。</li>
+                  <li>若购买的代理 IP 出现无法连接的问题，支持免费更换或退款。</li>
+                  <li>您可以在代理 IP 列表中延长代理 IP 使用期限，价格与购买时相同。</li>
+                </ol>
+              </details>
+            </section>
+          </aside>
+        </div>
+
+        <div class="rola-redirect-panel" id="rola-redirect-panel" hidden>
+          <div class="rola-panel-card">
               <div class="rola-panel-header">
                 <div class="rola-logo-wrap">
                   <svg class="rola-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -784,7 +788,6 @@
                 </a>
               </div>
             </div>
-          </aside>
         </div>
       </div>
     </div>

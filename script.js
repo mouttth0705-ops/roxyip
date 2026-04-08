@@ -11,6 +11,7 @@ const actionCells = Array.from(document.querySelectorAll(".action-cell"));
 const actionToggles = Array.from(document.querySelectorAll("[data-action-toggle]"));
 const purchaseSummary = document.querySelector(".purchase-summary");
 const rolaPanel = document.getElementById("rola-redirect-panel");
+const purchaseModalGrid = document.getElementById("purchase-modal-grid");
 
 function closeActionMenus() {
   actionCells.forEach((cell) => {
@@ -32,14 +33,14 @@ function setPurchaseModalOpen(isOpen) {
 }
 
 function setSupplier(supplier) {
-  if (!purchaseSummary || !rolaPanel) return;
+  if (!purchaseModalGrid || !rolaPanel) return;
 
-  if (supplier === "rola") {
-    purchaseSummary.hidden = true;
-    rolaPanel.hidden = false;
-  } else {
-    purchaseSummary.hidden = false;
+  if (supplier === "roxy") {
+    purchaseModalGrid.hidden = false;
     rolaPanel.hidden = true;
+  } else {
+    purchaseModalGrid.hidden = true;
+    rolaPanel.hidden = false;
   }
 }
 

@@ -1364,7 +1364,7 @@ input {
 .purchase-modal {
   width: min(1200px, calc(100vw - 32px));
   max-height: calc(100vh - 40px);
-  overflow: auto;
+  overflow: hidden;
   border-radius: 28px;
   background:
     linear-gradient(rgba(207, 226, 248, 0.18), rgba(207, 226, 248, 0.18)),
@@ -1386,6 +1386,25 @@ input {
 
 .purchase-modal-main {
   min-width: 0;
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16, 31, 61, 0.18) transparent;
+}
+
+.purchase-modal-main::-webkit-scrollbar {
+  width: 4px;
+}
+
+.purchase-modal-main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.purchase-modal-main::-webkit-scrollbar-thumb {
+  background: rgba(16, 31, 61, 0.18);
+  border-radius: 2px;
 }
 
 .purchase-modal-header {
@@ -1477,6 +1496,17 @@ input {
   margin: 0 0 12px;
   font-size: 18px;
   color: #1d2f4d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.purchase-section h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(16, 31, 61, 0.1);
 }
 
 .tile-group,
@@ -1867,8 +1897,42 @@ input {
   line-height: 1.5;
 }
 
+.notes-details {
+  width: 100%;
+}
+
+.notes-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #101f3d;
+  user-select: none;
+}
+
+.notes-summary::-webkit-details-marker {
+  display: none;
+}
+
+.notes-summary::after {
+  content: "›";
+  font-size: 18px;
+  font-weight: 400;
+  color: #888;
+  transform: rotate(90deg);
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.notes-details[open] .notes-summary::after {
+  transform: rotate(270deg);
+}
+
 .purchase-notes ol {
-  margin: 0;
+  margin: 10px 0 0;
   padding-left: 22px;
   color: #4d5d79;
   line-height: 1.9;
@@ -2251,17 +2315,10 @@ input {
 /* ── Rola Redirect Panel ───────────────────────────────────────── */
 
 .rola-redirect-panel {
-  position: sticky;
-  top: 24px;
-  align-self: start;
+  padding: 24px;
 }
 
 .rola-panel-card {
-  padding: 22px;
-  border-radius: 18px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   gap: 14px;
