@@ -1374,7 +1374,11 @@ input {
 
 .purchase-modal-top {
   padding: 24px 24px 20px;
-  border-bottom: 1px solid rgba(16, 31, 61, 0.08);
+  background: linear-gradient(135deg, #dbeafe 0%, #ede9fe 60%, #e0e7ff 100%);
+  border-radius: 28px 28px 0 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 6px 20px rgba(16, 31, 61, 0.12);
 }
 
 .purchase-modal-grid {
@@ -1382,6 +1386,8 @@ input {
   grid-template-columns: minmax(0, 1.4fr) 360px;
   gap: 28px;
   padding: 24px;
+  background: #f4f7fc;
+  border-radius: 0 0 28px 28px;
 }
 
 .purchase-modal-main {
@@ -1413,9 +1419,6 @@ input {
   gap: 18px;
   align-items: center;
   margin-bottom: 20px;
-  background:
-    linear-gradient(180deg, rgba(244, 248, 255, 0.9), rgba(255, 255, 255, 0)),
-    linear-gradient(135deg, rgba(202, 227, 255, 0.45), rgba(255, 241, 228, 0.24));
 }
 
 .purchase-brand {
